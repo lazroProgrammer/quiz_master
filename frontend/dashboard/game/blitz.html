@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blitz Mode - Quiz Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="quiz-container">
+    <h1>Blitz Mode</h1>
+    <div id="quiz">
+      Loading...
+    </div>
+  </div>
+
+  <script>
+    let questions = [];
+    let currentQuestionIndex = 0;
+    let answeredQuestions= 0;
+    let correctAnswers = 0;
+    let timeLeft = 90;
+    let timerInterval;
+
+    function startGame() {
+      correctAnswers = 0;
+      answeredQuestions= 0;
+      showQuestion();
+      startTimer();
+    }
+
+    function showQuestion() {
+      if (timeLeft <= 0) return showResults();
+
+      const question = questions[Math.floor(Math.random() * questions.length)];
+      const quizDiv = document.getElementById("quiz");
+      quizDiv.innerHTML = `
+        <div class="question">${question.text}</div>
+        <ul class="choices">
+          ${question.choices.map((choice, index) => `<li data-index="${index}">${choice.text}</li>`).join('')}
+        </ul>
+        <div id="timer">Time left: ${timeLeft} seconds</div>
+      `;
+
+      document.querySelectorAll(".choices li").forEach(li => {
+        li.addEventListener("click", () => {
+          const index = li.getAttribute("data-index");
+          answeredQuestions++;
+          if (question.choices[index].correct) {
+            correctAnswers++;
+            timeLeft += 2;
+          } else {
+            timeLeft -= 5;
+          }
+          showQuestion();
+        });
+      });
+    }
+
+    function startTimer() {
+      const timer = document.getElementById("timer");
+
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          showResults();
+        } else {
+          timer.textContent = `Time left: ${timeLeft} seconds`;
+        }
+      }, 1000);
+    }
+
+    function showResults() {
+      clearInterval(timerInterval);
+      document.getElementById("quiz").innerHTML = `
+        <div class="result">
+          <p>Time's up!</p>
+          <p>You got ${correctAnswers} out of ${answeredQuestions} correct.</p>
+        </div>
+      `;
+    }
+
+    fetch("../data/quizzes.xml")
+      .then(res => res.text())
+      .then(xmlText => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+        const quizNodes = Array.from(xmlDoc.querySelectorAll("quiz"));
+
+        questions = quizNodes.map(quiz => {
+          const qText = quiz.querySelector("question").textContent;
+          const qChoices = Array.from(quiz.querySelectorAll("choice")).map(choice => ({
+            text: choice.textContent,
+            correct: choice.getAttribute("correct") === "true"
+          }));
+          return { text: qText, choices: qChoices };
+        });
+
+        startGame();
+      })
+      .catch(error => {
+        document.getElementById("quiz").innerHTML = "Failed to load quiz.";
+        console.error("Error loading XML:", error);
+      });
+  </script>
+
+</body>
+</html>

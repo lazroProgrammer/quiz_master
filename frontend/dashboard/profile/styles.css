@@ -1,0 +1,73 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .profile-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    color: #222;
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .score-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+  }
+  
+  .score-card h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .score-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+  }
+  
+  .score-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .score-card li:last-child {
+    border-bottom: none;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 40px;
+  }
+    

@@ -1,0 +1,723 @@
+<?xml version="1.0" ?>
+<quizzes>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Uganda</choice>
+      <choice correct="false">India</choice>
+      <choice correct="true">China</choice>
+      <choice correct="false">Algeria</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">United Kingdom</choice>
+      <choice correct="false">Myanmar</choice>
+      <choice correct="true">Colombia</choice>
+      <choice correct="false">Turkey</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Philippines</choice>
+      <choice correct="false">Democratic Republic of the Congo</choice>
+      <choice correct="false">South Korea</choice>
+      <choice correct="true">France</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Japan</choice>
+      <choice correct="false">South Africa</choice>
+      <choice correct="true">Democratic Republic of the Congo</choice>
+      <choice correct="false">Colombia</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Ethiopia</choice>
+      <choice correct="false">Vietnam</choice>
+      <choice correct="false">Turkey</choice>
+      <choice correct="true">Colombia</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of United Kingdom?</question>
+    <choices>
+      <choice correct="false">Indonesian</choice>
+      <choice correct="false">French</choice>
+      <choice correct="false">Modern Standard Arabic</choice>
+      <choice correct="true">English</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of United Kingdom?</question>
+    <choices>
+      <choice correct="false">Pretoria</choice>
+      <choice correct="false">Moscow</choice>
+      <choice correct="true">London</choice>
+      <choice correct="false">Kinshasa</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="true">Germany</choice>
+      <choice correct="false">Egypt</choice>
+      <choice correct="false">Ethiopia</choice>
+      <choice correct="false">Algeria</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Tanzania</choice>
+      <choice correct="false">Iran</choice>
+      <choice correct="false">Uganda</choice>
+      <choice correct="true">Russia</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">South Korea</choice>
+      <choice correct="false">Ethiopia</choice>
+      <choice correct="false">Bangladesh</choice>
+      <choice correct="true">India</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of United States?</question>
+    <choices>
+      <choice correct="false">Ankara</choice>
+      <choice correct="false">Jakarta</choice>
+      <choice correct="false">Addis Ababa</choice>
+      <choice correct="true">Washington, D.C.</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Italy</choice>
+      <choice correct="false">Spain</choice>
+      <choice correct="true">Iran</choice>
+      <choice correct="false">Kenya</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Iran?</question>
+    <choices>
+      <choice correct="false">Arabic</choice>
+      <choice correct="false">English</choice>
+      <choice correct="true">Persian</choice>
+      <choice correct="false">Turkish</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Egypt</choice>
+      <choice correct="true">Mexico</choice>
+      <choice correct="false">Colombia</choice>
+      <choice correct="false">Turkey</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Myanmar</choice>
+      <choice correct="false">France</choice>
+      <choice correct="true">Russia</choice>
+      <choice correct="false">Japan</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Mexico</choice>
+      <choice correct="false">South Africa</choice>
+      <choice correct="true">Spain</choice>
+      <choice correct="false">Vietnam</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Ethiopia</choice>
+      <choice correct="false">Italy</choice>
+      <choice correct="false">South Africa</choice>
+      <choice correct="true">Japan</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="true">Colombia</choice>
+      <choice correct="false">Vietnam</choice>
+      <choice correct="false">Myanmar</choice>
+      <choice correct="false">Uganda</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Nigeria?</question>
+    <choices>
+      <choice correct="false">Madrid</choice>
+      <choice correct="false">Buenos Aires</choice>
+      <choice correct="true">Abuja</choice>
+      <choice correct="false">Manila</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="true">Colombia</choice>
+      <choice correct="false">Ukraine</choice>
+      <choice correct="false">Japan</choice>
+      <choice correct="false">Kenya</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Nigeria?</question>
+    <choices>
+      <choice correct="false">Hanoi</choice>
+      <choice correct="false">Bras���</choice>
+      <choice correct="true">Abuja</choice>
+      <choice correct="false">Pretoria</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Argentina?</question>
+    <choices>
+      <choice correct="false">Afrikaans</choice>
+      <choice correct="false">Korean</choice>
+      <choice correct="true">Spanish</choice>
+      <choice correct="false">Swahili</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Mexico</choice>
+      <choice correct="true">Brazil</choice>
+      <choice correct="false">Pakistan</choice>
+      <choice correct="false">Argentina</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="true">Turkey</choice>
+      <choice correct="false">Argentina</choice>
+      <choice correct="false">Mexico</choice>
+      <choice correct="false">Ethiopia</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Egypt</choice>
+      <choice correct="false">Myanmar</choice>
+      <choice correct="false">Ethiopia</choice>
+      <choice correct="true">China</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Brazil?</question>
+    <choices>
+      <choice correct="false">Swahili</choice>
+      <choice correct="false">German</choice>
+      <choice correct="false">Swahili</choice>
+      <choice correct="true">Portuguese</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Egypt?</question>
+    <choices>
+      <choice correct="true">Cairo</choice>
+      <choice correct="false">Abuja</choice>
+      <choice correct="false">Islamabad</choice>
+      <choice correct="false">Buenos Aires</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Iran?</question>
+    <choices>
+      <choice correct="false">Bogot�</choice>
+      <choice correct="false">Rome</choice>
+      <choice correct="false">Naypyidaw</choice>
+      <choice correct="true">Tehran</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Vietnam</choice>
+      <choice correct="false">United Kingdom</choice>
+      <choice correct="true">Pakistan</choice>
+      <choice correct="false">Italy</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="true">United Kingdom</choice>
+      <choice correct="false">Pakistan</choice>
+      <choice correct="false">China</choice>
+      <choice correct="false">India</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="true">India</choice>
+      <choice correct="false">Egypt</choice>
+      <choice correct="false">Indonesia</choice>
+      <choice correct="false">Bangladesh</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Vietnam</choice>
+      <choice correct="false">Spain</choice>
+      <choice correct="true">Russia</choice>
+      <choice correct="false">Myanmar</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Spain?</question>
+    <choices>
+      <choice correct="false">Thai</choice>
+      <choice correct="true">Spanish</choice>
+      <choice correct="false">Arabic</choice>
+      <choice correct="false">Standard Chinese</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Kenya</choice>
+      <choice correct="true">Mexico</choice>
+      <choice correct="false">Italy</choice>
+      <choice correct="false">France</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="true">United States</choice>
+      <choice correct="false">Brazil</choice>
+      <choice correct="false">South Africa</choice>
+      <choice correct="false">France</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Thailand?</question>
+    <choices>
+      <choice correct="false">Standard Chinese</choice>
+      <choice correct="true">Thai</choice>
+      <choice correct="false">Indonesian</choice>
+      <choice correct="false">French</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Italy</choice>
+      <choice correct="false">Nigeria</choice>
+      <choice correct="false">United Kingdom</choice>
+      <choice correct="true">Tanzania</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="true">Japan</choice>
+      <choice correct="false">Thailand</choice>
+      <choice correct="false">Indonesia</choice>
+      <choice correct="false">Algeria</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of China?</question>
+    <choices>
+      <choice correct="false">Tehran</choice>
+      <choice correct="false">Berlin</choice>
+      <choice correct="false">Nairobi</choice>
+      <choice correct="true">Beijing</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Philippines?</question>
+    <choices>
+      <choice correct="false">Washington, D.C.</choice>
+      <choice correct="false">Cairo</choice>
+      <choice correct="true">Manila</choice>
+      <choice correct="false">Beijing</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Turkey</choice>
+      <choice correct="false">United Kingdom</choice>
+      <choice correct="true">Pakistan</choice>
+      <choice correct="false">Tanzania</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="true">Egypt</choice>
+      <choice correct="false">Vietnam</choice>
+      <choice correct="false">Spain</choice>
+      <choice correct="false">Germany</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Egypt</choice>
+      <choice correct="false">Japan</choice>
+      <choice correct="false">Colombia</choice>
+      <choice correct="true">Brazil</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="true">Russia</choice>
+      <choice correct="false">Vietnam</choice>
+      <choice correct="false">South Africa</choice>
+      <choice correct="false">France</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Vietnam</choice>
+      <choice correct="false">France</choice>
+      <choice correct="false">Spain</choice>
+      <choice correct="true">Bangladesh</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Colombia</choice>
+      <choice correct="true">Argentina</choice>
+      <choice correct="false">Turkey</choice>
+      <choice correct="false">Myanmar</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Thailand?</question>
+    <choices>
+      <choice correct="false">Turkish</choice>
+      <choice correct="false">Ukrainian</choice>
+      <choice correct="false">Hindi</choice>
+      <choice correct="true">Thai</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="true">Algeria</choice>
+      <choice correct="false">Ukraine</choice>
+      <choice correct="false">Nigeria</choice>
+      <choice correct="false">Indonesia</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of China?</question>
+    <choices>
+      <choice correct="false">Thai</choice>
+      <choice correct="false">English</choice>
+      <choice correct="true">Standard Chinese</choice>
+      <choice correct="false">French</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Mexico</choice>
+      <choice correct="false">Brazil</choice>
+      <choice correct="false">Tanzania</choice>
+      <choice correct="true">Turkey</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Democratic Republic of the Congo</choice>
+      <choice correct="true">United States</choice>
+      <choice correct="false">Brazil</choice>
+      <choice correct="false">Egypt</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Argentina?</question>
+    <choices>
+      <choice correct="false">French</choice>
+      <choice correct="false">Modern Standard Arabic</choice>
+      <choice correct="true">Spanish</choice>
+      <choice correct="true">Spanish</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Vietnam?</question>
+    <choices>
+      <choice correct="true">Vietnamese</choice>
+      <choice correct="false">Russian</choice>
+      <choice correct="false">French</choice>
+      <choice correct="false">Burmese</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Iran?</question>
+    <choices>
+      <choice correct="true">Tehran</choice>
+      <choice correct="false">Buenos Aires</choice>
+      <choice correct="false">Beijing</choice>
+      <choice correct="false">New Delhi</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Ukraine?</question>
+    <choices>
+      <choice correct="false">London</choice>
+      <choice correct="false">Buenos Aires</choice>
+      <choice correct="false">Tehran</choice>
+      <choice correct="true">Kyiv</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Nigeria</choice>
+      <choice correct="false">Russia</choice>
+      <choice correct="false">South Korea</choice>
+      <choice correct="true">India</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Philippines</choice>
+      <choice correct="false">Thailand</choice>
+      <choice correct="true">Iran</choice>
+      <choice correct="false">Democratic Republic of the Congo</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Bangladesh</choice>
+      <choice correct="true">Germany</choice>
+      <choice correct="false">Myanmar</choice>
+      <choice correct="false">Uganda</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Philippines?</question>
+    <choices>
+      <choice correct="true">Manila</choice>
+      <choice correct="false">Paris</choice>
+      <choice correct="false">Seoul</choice>
+      <choice correct="false">Nairobi</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Turkey?</question>
+    <choices>
+      <choice correct="false">Amharic</choice>
+      <choice correct="true">Turkish</choice>
+      <choice correct="false">English</choice>
+      <choice correct="false">Urdu</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Algeria</choice>
+      <choice correct="false">Thailand</choice>
+      <choice correct="false">Democratic Republic of the Congo</choice>
+      <choice correct="true">Egypt</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Vietnam</choice>
+      <choice correct="false">Egypt</choice>
+      <choice correct="true">Argentina</choice>
+      <choice correct="false">France</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Kenya?</question>
+    <choices>
+      <choice correct="false">Moscow</choice>
+      <choice correct="false">Manila</choice>
+      <choice correct="false">Tehran</choice>
+      <choice correct="true">Nairobi</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="true">Ukraine</choice>
+      <choice correct="false">Uganda</choice>
+      <choice correct="false">South Africa</choice>
+      <choice correct="false">Myanmar</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Nigeria?</question>
+    <choices>
+      <choice correct="false">Tehran</choice>
+      <choice correct="false">Dhaka</choice>
+      <choice correct="true">Abuja</choice>
+      <choice correct="false">Washington, D.C.</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Myanmar</choice>
+      <choice correct="false">Italy</choice>
+      <choice correct="false">Thailand</choice>
+      <choice correct="true">Egypt</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="true">Mexico</choice>
+      <choice correct="false">South Korea</choice>
+      <choice correct="false">Egypt</choice>
+      <choice correct="false">Nigeria</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Egypt</choice>
+      <choice correct="false">Pakistan</choice>
+      <choice correct="false">France</choice>
+      <choice correct="true">South Africa</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Capital/Major City">What is the capital of Italy?</question>
+    <choices>
+      <choice correct="false">Tokyo</choice>
+      <choice correct="true">Rome</choice>
+      <choice correct="false">Kampala</choice>
+      <choice correct="false">Ankara</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="true">Indonesia</choice>
+      <choice correct="false">Iran</choice>
+      <choice correct="false">France</choice>
+      <choice correct="false">Turkey</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Uganda</choice>
+      <choice correct="false">Egypt</choice>
+      <choice correct="true">France</choice>
+      <choice correct="false">Thailand</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">Philippines</choice>
+      <choice correct="false">Colombia</choice>
+      <choice correct="true">Ukraine</choice>
+      <choice correct="false">Thailand</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Vietnam</choice>
+      <choice correct="false">Kenya</choice>
+      <choice correct="false">Germany</choice>
+      <choice correct="true">South Africa</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Italy</choice>
+      <choice correct="false">South Korea</choice>
+      <choice correct="true">Nigeria</choice>
+      <choice correct="false">Myanmar</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Germany</choice>
+      <choice correct="true">Indonesia</choice>
+      <choice correct="false">Japan</choice>
+      <choice correct="false">Kenya</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Ethiopia?</question>
+    <choices>
+      <choice correct="false">Spanish</choice>
+      <choice correct="false">Swahili</choice>
+      <choice correct="true">Amharic</choice>
+      <choice correct="false">Swahili</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Latitude">Which of these countries is located furthest north?</question>
+    <choices>
+      <choice correct="false">France</choice>
+      <choice correct="false">Kenya</choice>
+      <choice correct="true">Russia</choice>
+      <choice correct="false">Iran</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Population">Which of the following countries has the largest population?</question>
+    <choices>
+      <choice correct="false">Brazil</choice>
+      <choice correct="false">Myanmar</choice>
+      <choice correct="false">United States</choice>
+      <choice correct="true">China</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Land Area(Km2)">Which of these countries has the largest land area?</question>
+    <choices>
+      <choice correct="false">Turkey</choice>
+      <choice correct="false">Uganda</choice>
+      <choice correct="true">Mexico</choice>
+      <choice correct="false">Germany</choice>
+    </choices>
+  </quiz>
+  <quiz>
+    <question type="Official language">What is the official language of Colombia?</question>
+    <choices>
+      <choice correct="false">Swahili</choice>
+      <choice correct="false">English</choice>
+      <choice correct="true">Spanish</choice>
+      <choice correct="false">Ukrainian</choice>
+    </choices>
+  </quiz>
+</quizzes>

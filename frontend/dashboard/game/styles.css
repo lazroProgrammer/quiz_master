@@ -1,0 +1,122 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e1e8f0);
+    padding: 50px 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Quiz container: Keep the rest of the content static */
+#quiz-container {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    height: auto; /* Let the height grow naturally */
+}
+
+/* Title styling */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Question styling */
+.question {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-weight: bold;
+    opacity: 1; /* Start hidden */
+    transition: opacity 0.5s ease-in-out; /* Fade transition */
+}
+
+/* Choices styling */
+.choices {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.choices li {
+    background: #ecf0f1;
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.choices li:hover {
+    background: #bdc3c7;
+    transform: translateY(-3px);
+}
+
+.choices li:active {
+    transform: translateY(2px);
+}
+
+/* Timer styling */
+#timer {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #e74c3c;
+}
+
+/* Results section */
+.result {
+    font-size: 1.2rem;
+    margin: 40px;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+/* Answer review section: Make it scrollable */
+.answer-review {
+    text-align: left;
+    margin-top: 20px;
+    background: #f4f6f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-height: 500px; /* Limit the height to make it scrollable */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+.answer-review h3 {
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.answer-review ul {
+    list-style: none;
+    padding: 0;
+}
+
+.answer-review li {
+    background: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.answer-review li strong {
+    color: #3498db;
+}

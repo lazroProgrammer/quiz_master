@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="profile-container">
+        
+        <img id="avatar" class="avatar" src="https://cdn.jsdelivr.net/gh/alohe/avatars/png/vibrent_1.png" alt="User Avatar">
+        <h1 id="username-display">Profile</h1>
+
+        <div class="cards-wrapper">
+            <div class="score-card">
+                <h2>Classical</h2>
+                <ul id="scores-classical"></ul>
+            </div>
+            <div class="score-card">
+                <h2>Blitz</h2>
+                <ul id="scores-blitz"></ul>
+            </div>
+            <div class="score-card">
+                <h2>Survival</h2>
+                <ul id="scores-survival"></ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Avatars provided by <a href="https://github.com/alohe/avatars" target="_blank">Alohe Avatars</a> (MIT License)</p>
+    </footer>
+
+    <script>
+        const username = localStorage.getItem('username');
+        if (!username) {
+            window.location.href = '/login/auth.html';
+        }
+        const avatarBaseURL = 'https://cdn.jsdelivr.net/gh/alohe/avatars/png/vibrent_'; // or your own hosted location
+        const avatarCount = 10;
+
+        // Fetch the user profile
+        fetch(`http://localhost:3000/profile/${username}`)
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('username-display').textContent = `Profile: ${data.player.username}`;
+                
+                // Avatar handling
+                const avatarId = data.player.avatar || "1";
+                document.getElementById('avatar').src = `${avatarBaseURL}${avatarId}.png`;
+
+                // Function to render scores
+                const renderScores = (id, scores) => {
+                    const list = document.getElementById(id);
+                    list.innerHTML = '';
+                    scores.sort((a, b) => b - a).forEach(score => {
+                        const li = document.createElement('li');
+                        li.textContent = score;
+                        list.appendChild(li);
+                    });
+                };
+
+                // Render scores for each category
+                renderScores('scores-classical', data.player.scores.classical || []);
+                renderScores('scores-blitz', data.player.scores.blitz || []);
+                renderScores('scores-survival', data.player.scores.survival || []);
+            })
+            .catch(err => {
+                console.error("Error loading profile:", err);
+            });
+    </script>
+</body>
+
+</html>

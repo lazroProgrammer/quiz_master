@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="quiz-container">
+    <h1>Quiz Game</h1>
+    <div id="quiz">
+      Loading...
+    </div>
+  </div>
+
+  <script>
+    let questions = [];
+    let currentQuestionIndex = 0;
+    let correctAnswers = 0;
+    let totalTime = 0;
+    let questionStartTime = 0;
+    let timerInterval;
+    const timePerQuestion = 10;
+
+    function startGame() {
+      currentQuestionIndex = 0;
+      correctAnswers = 0;
+      totalTime = 0;
+      showQuestion();
+    }
+
+    function showQuestion() {
+      if (currentQuestionIndex >= questions.length) {
+        return showResults();
+      }
+
+      const question = questions[currentQuestionIndex];
+      const quizDiv = document.getElementById("quiz");
+      quizDiv.innerHTML = `
+        <div class="question">${question.text}</div>
+        <ul class="choices">
+          ${question.choices.map((choice, index) => `<li data-index="${index}">${choice.text}</li>`).join('')}
+        </ul>
+        <div id="timer">Time left: ${timePerQuestion} seconds</div>
+      `;
+
+      questionStartTime = Date.now();
+      startTimer();
+
+      document.querySelectorAll(".choices li").forEach(li => {
+        li.addEventListener("click", () => {
+          stopTimer();
+          const index = li.getAttribute("data-index");
+          if (question.choices[index].correct) {
+            correctAnswers++;
+            question.userAnswer = question.choices[index].text;
+          } else {
+            question.userAnswer = question.choices[index].text;
+          }
+          currentQuestionIndex++;
+          showQuestion();
+        });
+      });
+    }
+
+    function startTimer() {
+      let timeLeft = timePerQuestion;
+      const timer = document.getElementById("timer");
+      timer.textContent = `Time left: ${timeLeft} seconds`;
+
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        timer.textContent = `Time left: ${timeLeft} seconds`;
+
+        if (timeLeft <= 0) {
+          stopTimer();
+          questions[currentQuestionIndex].userAnswer = "No answer";
+          currentQuestionIndex++;
+          showQuestion();
+        }
+      }, 1000);
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      const timeSpent = Math.floor((Date.now() - questionStartTime) / 1000);
+      totalTime += timeSpent;
+    }
+
+    function showResults() {
+    const quizDiv = document.getElementById("quiz");
+    quizDiv.innerHTML = `
+      <div class="result">
+        <p>Quiz Finished</p>
+        <p>You got ${correctAnswers} out of ${questions.length} correct.</p>
+        <p>Total time spent: ${totalTime} seconds.</p>
+      </div>
+      <div class="answer-review">
+        <h3>Answers Review</h3>
+        <ul class="answer-list">
+          ${questions.map((q, i) => `
+            <li class="answer-item">
+              <strong>Q${i + 1}:</strong> ${q.text}<br>
+              <strong>Your Answer:</strong> ${q.userAnswer}<br>
+              <strong>Correct Answer:</strong> ${q.choices.find(c => c.correct).text}
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    `;
+}
+
+
+    // Load XML and start game
+    fetch("../data/quizzes.xml")
+      .then(res => res.text())
+      .then(xmlText => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+        const quizNodes = Array.from(xmlDoc.querySelectorAll("quiz"));
+
+        if (quizNodes.length === 0) {
+          document.getElementById("quiz").innerHTML = "No quizzes found in the XML file.";
+          return;
+        }
+
+        questions = quizNodes.map(quiz => {
+          const qElem = quiz.querySelector("question");
+          const qText = qElem.textContent;
+          const qChoices = Array.from(quiz.querySelectorAll("choice")).map(choice => ({
+            text: choice.textContent,
+            correct: choice.getAttribute("correct") === "true"
+          }));
+          return { text: qText, choices: qChoices };
+        });
+
+        // Shuffle and pick 10 questions
+        questions = questions.sort(() => 0.5 - Math.random()).slice(0, 10);
+        startGame();
+      })
+      .catch(error => {
+        document.getElementById("quiz").innerHTML = "Failed to load quiz.";
+        console.error("Error loading XML:", error);
+      });
+  </script>
+
+</body>
+</html>

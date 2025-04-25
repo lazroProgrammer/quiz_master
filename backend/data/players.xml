@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<players>
+  <player>
+    <username>john</username>
+    <password>1234</password>
+    <avatar>1</avatar>
+    <scores>
+        <classical>
+          <score>100</score>
+          <score>90</score>
+        </classical>
+        <blitz>
+          <score>150</score>
+          <score>140</score>
+        </blitz>
+        <survival>
+          <score>200</score>
+          <score>180</score>
+        </survival>
+      </scores>
+  </player>
+</players>
