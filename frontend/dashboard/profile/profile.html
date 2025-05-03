@@ -34,43 +34,65 @@
     </footer>
 
     <script>
-        const username = localStorage.getItem('username');
-        if (!username) {
-            window.location.href = '/login/auth.html';
-        }
-        const avatarBaseURL = 'https://cdn.jsdelivr.net/gh/alohe/avatars/png/vibrent_'; // or your own hosted location
-        const avatarCount = 10;
-
-        // Fetch the user profile
-        fetch(`http://localhost:3000/profile/${username}`)
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById('username-display').textContent = `Profile: ${data.player.username}`;
-                
-                // Avatar handling
-                const avatarId = data.player.avatar || "1";
-                document.getElementById('avatar').src = `${avatarBaseURL}${avatarId}.png`;
-
-                // Function to render scores
-                const renderScores = (id, scores) => {
-                    const list = document.getElementById(id);
-                    list.innerHTML = '';
-                    scores.sort((a, b) => b - a).forEach(score => {
-                        const li = document.createElement('li');
-                        li.textContent = score;
-                        list.appendChild(li);
-                    });
-                };
-
-                // Render scores for each category
-                renderScores('scores-classical', data.player.scores.classical || []);
-                renderScores('scores-blitz', data.player.scores.blitz || []);
-                renderScores('scores-survival', data.player.scores.survival || []);
-            })
-            .catch(err => {
-                console.error("Error loading profile:", err);
-            });
+        window.addEventListener('DOMContentLoaded', () => {
+            const username = localStorage.getItem('username');
+            if (!username) {
+                window.location.href = '/login/auth.html';
+                return;
+            }
+    
+            console.log('Username from localStorage:', username);
+    
+            const avatarBaseURL = 'https://cdn.jsdelivr.net/gh/alohe/avatars/png/vibrent_';
+    
+            fetch(`http://localhost:3000/profile/${username}`)
+                .then(res => {
+                    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                    return res.json();
+                })
+                .then(data => {
+                    console.log('Fetched profile data:', data);
+    
+                    const player = data.player;
+                    if (!player) throw new Error('No player data in response');
+    
+                    // Update username
+                    const usernameDisplay = document.getElementById('username-display');
+                    if (usernameDisplay) {
+                        usernameDisplay.textContent = `Profile: ${player.username}`;
+                    }
+    
+                    // Update avatar
+                    const avatarId = player.avatar || "1";
+                    const avatarImg = document.getElementById('avatar');
+                    if (avatarImg) {
+                        avatarImg.src = `${avatarBaseURL}${avatarId}.png`;
+                    }
+    
+                    // Render scores
+                    const renderScores = (id, scores) => {
+                        const list = document.getElementById(id);
+                        if (list) {
+                            list.innerHTML = '';
+                            scores?.sort((a, b) => b - a).forEach(score => {
+                                const li = document.createElement('li');
+                                li.textContent = score;
+                                list.appendChild(li);
+                            });
+                        }
+                    };
+    
+                    const scores = player.scores || {};
+                    renderScores('scores-classical', scores.classical);
+                    renderScores('scores-blitz', scores.blitz);
+                    renderScores('scores-survival', scores.survival);
+                })
+                .catch(err => {
+                    console.error("Error loading profile:", err);
+                });
+        });
     </script>
+    
 </body>
 
 </html>

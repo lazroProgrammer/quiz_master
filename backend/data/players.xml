@@ -2,21 +2,19 @@
 <players>
   <player>
     <username>john</username>
-    <password>1234</password>
-    <avatar>1</avatar>
+    <passwordHash>8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92</passwordHash>
+    <avatar>3</avatar>
     <scores>
-        <classical>
-          <score>100</score>
-          <score>90</score>
-        </classical>
-        <blitz>
-          <score>150</score>
-          <score>140</score>
-        </blitz>
-        <survival>
-          <score>200</score>
-          <score>180</score>
-        </survival>
-      </scores>
+      <classical>
+        <score>600</score>
+
+      </classical>
+      <blitz>
+        <score>1500</score>
+        <score>0</score>
+      </blitz>
+      <survival>
+      </survival>
+    </scores>
   </player>
 </players>

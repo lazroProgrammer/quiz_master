@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="players">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="player" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="username" type="xs:string"/>
+              <xs:element name="passwordHash" type="xs:string"/>
+              <xs:element name="avatar" type="xs:int"/>
+              <xs:element name="scores">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="classical" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="score" type="xs:int" maxOccurs="unbounded" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="blitz" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="score" type="xs:int" maxOccurs="unbounded" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="survival" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="score" type="xs:int" maxOccurs="unbounded" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

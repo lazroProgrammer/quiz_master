@@ -20,6 +20,8 @@
     let correctAnswers = 0;
     let totalTime = 0;
     let questionStartTime = 0;
+    let score=0;
+    let streak=0;
     let timerInterval;
     const timePerQuestion = 10;
 
@@ -27,6 +29,8 @@
       currentQuestionIndex = 0;
       correctAnswers = 0;
       totalTime = 0;
+      score=0;
+      streak=0;
       showQuestion();
     }
 
@@ -50,12 +54,16 @@
 
       document.querySelectorAll(".choices li").forEach(li => {
         li.addEventListener("click", () => {
+
           stopTimer();
           const index = li.getAttribute("data-index");
           if (question.choices[index].correct) {
             correctAnswers++;
+            score+=100 + streak* 100;
+            streak++
             question.userAnswer = question.choices[index].text;
           } else {
+            streak=0
             question.userAnswer = question.choices[index].text;
           }
           currentQuestionIndex++;
@@ -86,9 +94,12 @@
       clearInterval(timerInterval);
       const timeSpent = Math.floor((Date.now() - questionStartTime) / 1000);
       totalTime += timeSpent;
+      console.log("score:", score)
     }
 
     function showResults() {
+      console.log("final score:", score)
+      saveScore("classical",score)
     const quizDiv = document.getElementById("quiz");
     quizDiv.innerHTML = `
       <div class="result">
@@ -143,6 +154,18 @@
         document.getElementById("quiz").innerHTML = "Failed to load quiz.";
         console.error("Error loading XML:", error);
       });
+
+      function saveScore(mode, score) {
+  const username = localStorage.getItem('username');
+  if (!username || !mode || isNaN(score)) return;
+
+  fetch('http://localhost:3000/score', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, mode, score })
+  }).catch(err => console.error("Failed to save score:", err));
+}
+
   </script>
 
 </body>

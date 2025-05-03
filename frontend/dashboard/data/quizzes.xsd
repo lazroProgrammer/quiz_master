@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="QuizTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Population"/>
+      <xs:enumeration value="Land Area(Km2)"/>
+      <xs:enumeration value="Latitude"/>
+      <xs:enumeration value="Official language"/>
+      <xs:enumeration value="Capital/Major City"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="quizzes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="quiz" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="question">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="text" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="type" type="QuizTypeEnum" use="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="choices">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="choice" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="text" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="correct" type="xs:boolean" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

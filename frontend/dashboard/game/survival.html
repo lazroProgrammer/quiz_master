@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Survival Mode - Quiz Game</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <div id="quiz-container">
@@ -17,12 +19,16 @@
   <script>
     let questions = [];
     let correctAnswers = 0;
-    let answeredQuestions= 0;
+    let answeredQuestions = 0;
+    let score = 0
+    let streak = 0
     let lives = 3;
 
     function startGame() {
       correctAnswers = 0;
-      answeredQuestions= 0;
+      answeredQuestions = 0;
+      score = 0
+      streak = 0
       lives = 3;
       showQuestion();
     }
@@ -45,17 +51,24 @@
           const index = li.getAttribute("data-index");
           if (question.choices[index].correct) {
             correctAnswers++;
+            score += 100 + streak * 100;
+            streak++
             answeredQuestions++;
           } else {
+            streak = 0
             lives--;
             answeredQuestions++;
           }
+          console.log("score:", score)
+
           showQuestion();
         });
       });
     }
 
     function showResults() {
+      saveScore("survival", score)
+      console.log("final score:", score)
       document.getElementById("quiz").innerHTML = `
         <div class="result">
           <p>Game Over</p>
@@ -86,7 +99,19 @@
         document.getElementById("quiz").innerHTML = "Failed to load quiz.";
         console.error("Error loading XML:", error);
       });
+
+    function saveScore(mode, score) {
+  const username = localStorage.getItem('username');
+  if (!username || !mode || isNaN(score)) return;
+
+  fetch('http://localhost:3000/score', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, mode, score })
+  }).catch(err => console.error("Failed to save score:", err));
+}
   </script>
 
 </body>
+
 </html>

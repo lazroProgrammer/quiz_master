@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Blitz Mode - Quiz Game</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <div id="quiz-container">
     <h1>Blitz Mode</h1>
-    <div id="quiz">
-      Loading...
-    </div>
+    <div id="timer">Time left: 90 seconds</div>
+    <div id="quiz">Loading...</div>
   </div>
+  
 
   <script>
     let questions = [];
     let currentQuestionIndex = 0;
-    let answeredQuestions= 0;
+    let answeredQuestions = 0;
     let correctAnswers = 0;
+    let score = 0;
+    let streak = 0;
     let timeLeft = 90;
+    let timeBonus=0
     let timerInterval;
+    const timer = document.getElementById("timer");
 
     function startGame() {
       correctAnswers = 0;
-      answeredQuestions= 0;
+      answeredQuestions = 0;
+      timeBonus=0
+      timeLeft = 90;
+      score = 0
+      streak = 0
       showQuestion();
       startTimer();
     }
 
     function showQuestion() {
-      if (timeLeft <= 0) return showResults();
+  if (timeLeft <= 0) return showResults();
 
-      const question = questions[Math.floor(Math.random() * questions.length)];
-      const quizDiv = document.getElementById("quiz");
-      quizDiv.innerHTML = `
-        <div class="question">${question.text}</div>
-        <ul class="choices">
-          ${question.choices.map((choice, index) => `<li data-index="${index}">${choice.text}</li>`).join('')}
-        </ul>
-        <div id="timer">Time left: ${timeLeft} seconds</div>
-      `;
+  const question = questions[Math.floor(Math.random() * questions.length)];
+  const quizDiv = document.getElementById("quiz");
+  quizDiv.innerHTML = `
+    <div class="question">${question.text}</div>
+    <ul class="choices">
+      ${question.choices.map((choice, index) => `<li data-index="${index}">${choice.text}</li>`).join('')}
+    </ul>
+  `;
 
-      document.querySelectorAll(".choices li").forEach(li => {
-        li.addEventListener("click", () => {
-          const index = li.getAttribute("data-index");
-          answeredQuestions++;
-          if (question.choices[index].correct) {
-            correctAnswers++;
-            timeLeft += 2;
-          } else {
-            timeLeft -= 5;
-          }
-          showQuestion();
-        });
-      });
-    }
+  document.querySelectorAll(".choices li").forEach(li => {
+    li.addEventListener("click", () => {
+      const index = li.getAttribute("data-index");
+      answeredQuestions++;
+      if (question.choices[index].correct) {
+        score += 100 + streak * 100;
+        streak++;
+        correctAnswers++;
+        timeLeft += 2; 
+        updateTimeDisplay()
+        applyFloatingText(true); 
+      } else {
+        streak = 0;
+        timeLeft -= 5; 
+        updateTimeDisplay()
+        applyFloatingText(false);
+      }
+      console.log("score:", score);
+      showQuestion();
+    });
+  });
+}
+function updateTimeDisplay() {
+  timer.textContent = `Time left: ${timeLeft} seconds`;
+}
 
     function startTimer() {
-      const timer = document.getElementById("timer");
+      
 
       timerInterval = setInterval(() => {
         timeLeft--;
@@ -72,6 +92,8 @@
     }
 
     function showResults() {
+      saveScore("blitz", score)
+      console.log("final score:", score)
       clearInterval(timerInterval);
       document.getElementById("quiz").innerHTML = `
         <div class="result">
@@ -103,7 +125,56 @@
         document.getElementById("quiz").innerHTML = "Failed to load quiz.";
         console.error("Error loading XML:", error);
       });
+
+      function saveScore(mode, score) {
+  const username = localStorage.getItem('username');
+  if (!username || !mode || isNaN(score)) return;
+
+  fetch('http://localhost:3000/score', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, mode, score })
+  }).catch(err => console.error("Failed to save score:", err));
+}
+
+function applyFloatingText(isPositive) {
+  const timer = document.getElementById("timer");
+  const floatingText = document.createElement("div");
+  floatingText.classList.add("floating-text");
+  
+  if (isPositive) {
+    floatingText.textContent = "+2";
+    floatingText.classList.add("green");
+  } else {
+    floatingText.textContent = "-5";
+    floatingText.classList.add("red");
+  }
+
+  const rect = timer.getBoundingClientRect();
+  floatingText.style.left = `${rect.left + rect.width / 2 - floatingText.offsetWidth / 2}px`;
+  floatingText.style.top = `${rect.top - floatingText.offsetHeight - 10}px`;
+
+  timer.appendChild(floatingText);
+  
+  setTimeout(() => {
+    floatingText.style.opacity = 1;
+    floatingText.style.transform = "translateY(-100px)";
+  }, 10);
+
+  setTimeout(() => {
+    floatingText.style.opacity = 0;
+  }, 1000);
+
+  setTimeout(() => {
+    floatingText.remove();
+  }, 1500);
+}
+
+
+
+
   </script>
 
 </body>
+
 </html>

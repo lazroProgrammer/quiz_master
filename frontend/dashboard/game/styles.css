@@ -120,3 +120,22 @@ h1 {
 .answer-review li strong {
     color: #3498db;
 }
+
+.floating-text {
+    position: absolute;
+    font-size: 30px; /* Larger font size */
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Longer transition for smooth fade-out */
+  }
+  
+  .floating-text.green {
+    color: green;
+  }
+  
+  .floating-text.red {
+    color: red;
+  }
+  
