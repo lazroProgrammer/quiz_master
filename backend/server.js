@@ -34,19 +34,17 @@ app.post('/signup', async (req, res) => {
     const passwordHash = await hashPassword(password);
     const avatarId = Math.floor(Math.random() * 10) + 1;
 
-    // Create the new player with scores structure containing <score> as placeholders
     const newPlayer = {
       username: [username],
       passwordHash: [passwordHash],
       avatar: [avatarId.toString()],
       scores: {
-        classical: [{ score: [{ score: [] }] }], // Add score structure with empty array
-        blitz: [{ score: [{ score: [] }] }],     // Add score structure with empty array
-        survival: [{ score: [{ score: [] }] }]   // Add score structure with empty array
+        classical: [{ score: [{ score: [] }] }],
+        blitz: [{ score: [{ score: [] }] }],
+        survival: [{ score: [{ score: [] }] }]
       }
     };
 
-    // Remove the empty <score> elements immediately after creation
     newPlayer.scores.classical[0].score[0].score.shift();
     newPlayer.scores.blitz[0].score[0].score.shift();
     newPlayer.scores.survival[0].score[0].score.shift();

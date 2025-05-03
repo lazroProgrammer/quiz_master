@@ -13,21 +13,21 @@
               <xs:element name="scores">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="classical" minOccurs="0">
+                    <xs:element name="classical" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="score" type="xs:int" maxOccurs="unbounded" minOccurs="0"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="blitz" minOccurs="0">
+                    <xs:element name="blitz" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="score" type="xs:int" maxOccurs="unbounded" minOccurs="0"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="survival" minOccurs="0">
+                    <xs:element name="survival" minOccurs="1" maxOccurs="1">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="score" type="xs:int" maxOccurs="unbounded" minOccurs="0"/>

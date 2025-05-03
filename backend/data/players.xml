@@ -7,11 +7,9 @@
     <scores>
       <classical>
         <score>600</score>
-
       </classical>
       <blitz>
         <score>1500</score>
-        <score>0</score>
       </blitz>
       <survival>
       </survival>
