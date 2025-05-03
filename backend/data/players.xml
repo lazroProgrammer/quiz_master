@@ -15,4 +15,23 @@
       </survival>
     </scores>
   </player>
+  <player>
+    <username>james</username>
+    <passwordHash>481f6cc0511143ccdd7e2d1b1b94faf0a700a8b49cd13922a70b5ae28acaa8c5</passwordHash>
+    <avatar>8</avatar>
+    <scores>
+      <classical>
+        <score/>
+        <score>400</score>
+      </classical>
+      <blitz>
+        <score/>
+        <score>900</score>
+      </blitz>
+      <survival>
+        <score/>
+        <score>100</score>
+      </survival>
+    </scores>
+  </player>
 </players>
