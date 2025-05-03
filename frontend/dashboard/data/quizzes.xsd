@@ -27,7 +27,7 @@
               <xs:element name="choices">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="choice" maxOccurs="unbounded">
+                    <xs:element name="choice" maxOccurs="4">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="text" type="xs:string"/>
