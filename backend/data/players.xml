@@ -23,14 +23,17 @@
       <classical>
         <score/>
         <score>400</score>
+        <score>1000</score>
       </classical>
       <blitz>
         <score/>
         <score>900</score>
+        <score>1200</score>
       </blitz>
       <survival>
         <score/>
         <score>100</score>
+        <score>300</score>
       </survival>
     </scores>
   </player>
