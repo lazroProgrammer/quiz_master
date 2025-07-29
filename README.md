@@ -1,4 +1,4 @@
-# 🌍 Country Quiz Website
+# 🌍 QuizMaster
 
 A fun and educational quiz website where users can test their knowledge about countries, their capitals, and flags. Built using **Vanilla JavaScript**, **HTML/CSS**, and an **Express.js** backend that serves data from an XML file.
 
