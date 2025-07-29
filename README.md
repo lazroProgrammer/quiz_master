@@ -6,7 +6,7 @@ A fun and educational quiz website where users can test their knowledge about co
 
 ## 📸 Preview
 
-![screenshot](./screenshots/quiz-preview.png)  
+![screenshot](./homepage.png)  
 *A responsive and clean design suitable for both desktop and mobile.*
 
 ---
